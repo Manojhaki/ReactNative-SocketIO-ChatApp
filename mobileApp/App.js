@@ -12,7 +12,7 @@ export default function App() {
   const socket = useRef(null);
   useEffect(() => {
 
-    socket.current = io("192.168.1.155");
+    socket.current = io("");
     socket.current.on("message", message => {
 
       setRecievedMessages(prevState => GiftedChat.append(prevState, message));
